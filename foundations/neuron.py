@@ -17,9 +17,8 @@ class Solution:
         if activation == "sigmoid":
             res = 1 / (1 + np.exp(-z))
         elif activation == "relu":
-            res = max(0, z)
+            res = max(0.0, z)
         else:
             raise NotImplementedError
 
-
-        return round(float(res), 5)
+        return round(res, 5)
